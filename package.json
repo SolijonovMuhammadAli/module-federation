@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-module-federation",
+  "version": "1.0.0",
+  "author": "Solijonov Muhammad Ali",
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "start": "wsrun --parallel start",
+    "serve": "concurrently \"wsrun --parallel start\" \"wsrun --parallel serve\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "wsrun": "^5.2.4"
+  }
+}
